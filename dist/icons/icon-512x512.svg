@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="236" fill="#22C55E"/>
+  
+  <!-- Clock Design -->
+  <circle cx="256" cy="256" r="188" stroke="white" stroke-width="20" fill="none"/>
+  <line x1="256" y1="256" x2="256" y2="140" stroke="white" stroke-width="20" stroke-linecap="round"/>
+  <line x1="256" y1="256" x2="350" y2="256" stroke="white" stroke-width="20" stroke-linecap="round"/>
+  
+  <!-- Power Symbol -->
+  <path d="M256 90 L256 170" stroke="white" stroke-width="28" stroke-linecap="round"/>
+  <path d="M186 130 A110 110 0 1 0 326 130" stroke="white" stroke-width="28" stroke-linecap="round" fill="none"/>
+</svg>

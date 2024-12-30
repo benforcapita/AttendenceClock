@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns="http://schemas.nativescript.org/tns.xsd" class="mt-4">
+    <ListView items="{{ records }}" class="list-group">
+        <ListView.itemTemplate>
+            <Label text="{{ date + ' - ' + startTime + ' to ' + (endTime || 'still working') }}"
+                   class="text-white p-2 text-lg" 
+                   textWrap="true" />
+        </ListView.itemTemplate>
+    </ListView>
+</ScrollView>

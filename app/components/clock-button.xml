@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://schemas.nativescript.org/tns.xsd" class="text-center p-4">
+    <Button text="{{ buttonText }}" 
+            tap="{{ onClockTap }}" 
+            class="{{ 'text-2xl font-bold text-white p-4 ' + buttonClass }}"
+            width="200" 
+            height="200" 
+            style="border-radius: 100;" />
+</StackLayout>

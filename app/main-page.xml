@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="navigatingTo">
+    <ActionBar title="Attendance Clock" class="bg-blue-600 text-white" flat="true" />
+    
+    <GridLayout rows="*, 2*" class="bg-gray-900 p-4">
+        <include src="~/components/clock-button.xml" row="0" />
+        <include src="~/components/attendance-list.xml" row="1" />
+    </GridLayout>
+</Page>

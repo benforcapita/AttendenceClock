@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert SVG to PNG</title>
+</head>
+<body>
+    <canvas id="canvas192" width="192" height="192"></canvas>
+    <canvas id="canvas512" width="512" height="512"></canvas>
+    <script>
+        function svgToPng(svgText, canvas) {
+            const img = new Image();
+            const svg = new Blob([svgText], {type: 'image/svg+xml;charset=utf-8'});
+            const url = URL.createObjectURL(svg);
+            
+            img.onload = function() {
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0);
+                const pngUrl = canvas.toDataURL('image/png');
+                const link = document.createElement('a');
+                link.download = canvas.width + 'x' + canvas.width + '.png';
+                link.href = pngUrl;
+                link.click();
+            };
+            
+            img.src = url;
+        }
+
+        // Load and convert SVGs
+        fetch('icon-192x192.svg')
+            .then(response => response.text())
+            .then(svgText => svgToPng(svgText, document.getElementById('canvas192')));
+            
+        fetch('icon-512x512.svg')
+            .then(response => response.text())
+            .then(svgText => svgToPng(svgText, document.getElementById('canvas512')));
+    </script>
+</body>
+</html>
